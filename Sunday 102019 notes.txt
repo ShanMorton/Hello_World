@@ -1,0 +1,15 @@
+Finished @LinuxAcademy Lab "Auditing Resource Compliance with AWS Config"
+
+
+We can not directly attach an IAM Policy to an EC2 instance. IAM Policies are directly attached to IAM Roles. 
+IAM Roles are directly attached to an AWS Resource. The AWS Resource will inherit the IAM Policies of the 
+IAM Role.
+
+An IAM Role does not assign permissions to an IAM Group. The AWS Resource will inherit the IAM Policies of the IAM Role it is assigned. For example, an EC2 instance will inherit the permissions of the IAM Role.
+
+IAM Policies are used to assign permissions to an IAM Group.
+
+
+All of these are benefits of Amazon Inspector. Amazon Inspector analyzes AWS Resource behavior, test network security, assesses deviations from best practices, and provides recommendations on how to resolve based on Inspector reports.
+
+Video for reference: Amazon Inspector

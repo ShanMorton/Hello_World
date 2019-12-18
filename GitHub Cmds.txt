@@ -1,0 +1,229 @@
+PS C:\Users\Administrator\git\Hello_World> git status
+On branch Dev
+Your branch is up to date with 'origin/Dev'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        testing500.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\Administrator\git\Hello_World> del .\testing400.txt
+PS C:\Users\Administrator\git\Hello_World> git status
+On branch Dev
+Your branch is up to date with 'origin/Dev'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    testing400.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        testing500.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Administrator\git\Hello_World> ls
+
+
+    Directory: C:\Users\Administrator\git\Hello_World
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----       12/11/2019   6:45 PM           4508 Create a VPC Endpoint and S3 bucket in AWS.txt
+-a----       12/11/2019   6:45 PM            230 GroceryStore.py
+-a----       12/11/2019   6:45 PM            126 README.md
+-a----       12/11/2019   6:45 PM             92 TestDocument.txt
+-a----       12/11/2019   7:01 PM             33 testing100
+-a----       12/11/2019   7:03 PM             17 testing200.txt
+-a----       12/11/2019   7:24 PM             14 testing300.txt
+-a----       12/11/2019   7:25 PM             14 testing500.txt
+
+
+PS C:\Users\Administrator\git\Hello_World> git commit -m "Removing testing400.txt file; not needed"
+On branch Dev
+Your branch is up to date with 'origin/Dev'.
+
+Changes not staged for commit:
+        deleted:    testing400.txt
+
+Untracked files:
+        testing500.txt
+
+no changes added to commit
+PS C:\Users\Administrator\git\Hello_World> git rm .\testing500.txt
+fatal: pathspec '.\testing500.txt' did not match any files
+PS C:\Users\Administrator\git\Hello_World> git rm testing400.txt
+rm 'testing400.txt'
+PS C:\Users\Administrator\git\Hello_World> git status
+On branch Dev
+Your branch is up to date with 'origin/Dev'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    testing400.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        testing500.txt
+
+PS C:\Users\Administrator\git\Hello_World> ls
+
+
+    Directory: C:\Users\Administrator\git\Hello_World
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----       12/11/2019   6:45 PM           4508 Create a VPC Endpoint and S3 bucket in AWS.txt
+-a----       12/11/2019   6:45 PM            230 GroceryStore.py
+-a----       12/11/2019   6:45 PM            126 README.md
+-a----       12/11/2019   6:45 PM             92 TestDocument.txt
+-a----       12/11/2019   7:01 PM             33 testing100
+-a----       12/11/2019   7:03 PM             17 testing200.txt
+-a----       12/11/2019   7:24 PM             14 testing300.txt
+-a----       12/11/2019   7:25 PM             14 testing500.txt
+
+
+PS C:\Users\Administrator\git\Hello_World> git commit -m "Removing testing400.txt file; not needed"
+[Dev 6f1cb44] Removing testing400.txt file; not needed
+ 1 file changed, 2 deletions(-)
+ delete mode 100644 testing400.txt
+PS C:\Users\Administrator\git\Hello_World> ls
+
+
+    Directory: C:\Users\Administrator\git\Hello_World
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----       12/11/2019   6:45 PM           4508 Create a VPC Endpoint and S3 bucket in AWS.txt
+-a----       12/11/2019   6:45 PM            230 GroceryStore.py
+-a----       12/11/2019   6:45 PM            126 README.md
+-a----       12/11/2019   6:45 PM             92 TestDocument.txt
+-a----       12/11/2019   7:01 PM             33 testing100
+-a----       12/11/2019   7:03 PM             17 testing200.txt
+-a----       12/11/2019   7:24 PM             14 testing300.txt
+-a----       12/11/2019   7:25 PM             14 testing500.txt
+
+
+PS C:\Users\Administrator\git\Hello_World> git push origin Dev
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 247 bytes | 247.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/ShanMorton/Hello_World.git
+   832acd3..6f1cb44  Dev -> Dev
+PS C:\Users\Administrator\git\Hello_World>
+
+ Id CommandLine
+  -- -----------
+   1 mkdir git
+   2 cd git
+   3 git
+   4 git clone https://github.com/ShanMorton/Hello_World.git
+   5 ls
+   6 cd .\Hello_World\
+   7 ls
+   8 dir
+   9 pwd
+  10 git branch
+  11 git checkout /?
+  12 git checkout ?
+  13 git checkout
+  14 git branch Dev
+  15 git branch
+  16 git checkout Dev
+  17 git branch
+  18 git checkout master
+  19 git branch -d Dev
+  20 git branch
+  *21 git fetch origin
+  22 git branch
+  *23 git checkout -b Dev origin/Dev
+  24 git branch
+  25 ls
+  26 ls
+  27 git pull
+  28 ls
+  29 edit testing100
+  30 notepad testing100
+  31 git status
+  32 notepad testing200
+  33 git status
+  34 git add testing100
+  35 git status
+  36 git commit -m "updated testing100 file"
+  37 git config --global user.name "Shandra Morton"
+  38 git config --global user.email shanmorton@gmail.com
+  39 git commit --amend --reset-author
+  40 git log
+  41 git push origin Dev
+  42 git status
+  43 git add *
+  44 git status
+  45 git commit -m "Finished testing200 file"
+  46 git status
+  47 git push origin Dev
+  48 notepad
+  49 git status
+  50 git add .\testing300.txt .\testing400.txt
+  51 git status
+  52 git commit -m "Commit files to be tracked"
+  53 git status
+  54 git
+  55 git rm
+  56 git rm .\testing400.txt
+  57 ls
+  58 git status
+  59 git restore --staged .\testing400.txt
+  60 ls
+  61 git status
+  62 git restore testing400.txt
+  63 ls
+  64 git status
+  65 git log
+  66 git push origin Dev
+  67 git status
+  68 clear
+  69 git status
+  70 del .\testing400.txt
+  71 git status
+  72 ls
+  73 git commit -m "Removing testing400.txt file; not needed"
+  74 git rm .\testing500.txt
+  75 git rm testing400.txt
+  76 git status
+  77 ls
+  78 git commit -m "Removing testing400.txt file; not needed"
+  79 ls
+  80 git push origin Dev
+
+
+
+
+12/17/19  cmds 
+   1 git version
+   2 pwd
+   3 mkdir projects
+   4 cd project
+   5 cd projects
+   6 pwd
+   7 git config --global user.name "Shandra Morton"
+   8 git config --global user.email "ShanMorton@gmail.com"
+   9 git config --global --list
+  10 git clone http://github.com/ShanMorton/sm-demo.git
+  11 ls
+  12 cd .\sm-demo\
+  13 ls
+  14 git status
+  15 echo "Test Git Qiuck Start Demo" >> start.txt
+  16 ls
+  17 ls -a
+  18 ls
+  19 cat .\start.txt
+  20 git status
+
